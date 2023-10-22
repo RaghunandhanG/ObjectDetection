@@ -5,7 +5,6 @@ from ultralytics import YOLO
 import supervision as sv
 
 
-
 model = YOLO('best.pt')
 
 st.set_page_config(page_title="Object Detection")
@@ -38,7 +37,8 @@ if st.button("Start Detection"):
 
 
           frame = box_annotator.annotate(scene = frame,detections = detections)
+          webrtc_streamer(key = frame)
          
-          video_display.image(frame, channels="BGR")
-          cv2.waitKey(1)
+          #video_display.image(frame, channels="BGR")
+          #cv2.waitKey(1)
              
