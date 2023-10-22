@@ -31,7 +31,7 @@ box_annotator = sv.BoxAnnotator(
 if st.button("Start Detection"):
     webrtc_streamer(key = 'key')
  
-        '''cap = cv2.VideoCapture(0)
+    '''cap = cv2.VideoCapture(0)
 
         while True:
           _, frame = cap.read()
