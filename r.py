@@ -16,7 +16,7 @@ box_annotator = sv.BoxAnnotator(
     thickness = 2,
     text_thickness = 2,
     text_scale = 1)
-class VideoProcessor:
+'''class VideoProcessor:
     def recv(self,frame):
           box_annotator = sv.BoxAnnotator(
           thickness = 2,
@@ -26,9 +26,10 @@ class VideoProcessor:
           detections = sv.Detections.from_ultralytics(result)
           frame = box_annotator.annotate(scene = frame,detections = detections)
 
-          return frame
+          return frame'''
 
 if st.button("Start Detection"):
+    webrtc_streamer(key = 'key',video_processor_factory = VideoProcessor)
  
         '''cap = cv2.VideoCapture(0)
 
@@ -43,7 +44,7 @@ if st.button("Start Detection"):
             #for _, confidence, class_id, _
             # detections
        # 
-webrtc_streamer(key = 'key',video_processor_factory = VideoProcessor)
+            webrtc_streamer(key = 'key',video_processor_factory = VideoProcessor)
          
           #video_display.image(frame, channels="BGR")
           #cv2.waitKey(1)
