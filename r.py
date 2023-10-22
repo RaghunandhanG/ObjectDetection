@@ -36,6 +36,6 @@ if st.button("Start Detection"):
 
           frame = box_annotator.annotate(scene = frame,detections = detections)
          
-          cv2.imshow('feed',frame)
+          video_display.image(frame, channels="BGR")
           cv2.waitKey(1)
              
