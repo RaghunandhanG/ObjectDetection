@@ -1,5 +1,5 @@
 import streamlit as st
-import import opencv as cv2
+import opencv as cv2
 from ultralytics import YOLO
 import supervision as sv
 
