@@ -29,7 +29,7 @@ box_annotator = sv.BoxAnnotator(
           return frame'''
 
 if st.button("Start Detection"):
-    webrtc_streamer(key = 'key',video_processor_factory = VideoProcessor)
+    webrtc_streamer(key = 'key')
  
         '''cap = cv2.VideoCapture(0)
 
@@ -44,7 +44,7 @@ if st.button("Start Detection"):
             #for _, confidence, class_id, _
             # detections
        # 
-            webrtc_streamer(key = 'key',video_processor_factory = VideoProcessor)
+            #webrtc_streamer(key = 'key',video_processor_factory = VideoProcessor)
          
           #video_display.image(frame, channels="BGR")
           #cv2.waitKey(1)
