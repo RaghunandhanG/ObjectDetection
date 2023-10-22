@@ -16,8 +16,7 @@ box_annotator = sv.BoxAnnotator(
     thickness = 2,
     text_thickness = 2,
     text_scale = 1)
-if st.button('Start'):
-    webrtc_streamer(key='key')
+webrtc_streamer(key='key')
  
     
          # labels = [
