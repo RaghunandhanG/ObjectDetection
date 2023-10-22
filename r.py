@@ -1,10 +1,4 @@
-import subprocess
-
-# Upgrade pip using the subprocess module
-subprocess.check_call(["python", "-m", "pip", "install", "--upgrade", "pip"])
-
-
-
+import cv2
 import streamlit as st
 from ultralytics import YOLO
 import supervision as sv
