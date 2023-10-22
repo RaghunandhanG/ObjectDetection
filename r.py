@@ -16,16 +16,14 @@ box_annotator = sv.BoxAnnotator(
     thickness = 2,
     text_thickness = 2,
     text_scale = 1)
+
 webrtc_streamer(key='key')
- 
     
          # labels = [
            # f"{model.model.names[class_id]} {confidence:0.2f}"
             #for _, confidence, class_id, _
             # detections
        # 
-            #webrtc_streamer(key = 'key',video_processor_factory = VideoProcessor)
-         
-          #video_display.image(frame, channels="BGR")
+           
           #cv2.waitKey(1)
              
