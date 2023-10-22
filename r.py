@@ -5,7 +5,7 @@ import supervision as sv
 
 
 
-model = YOLO('C:/Users/Mech/Documents/sih/best.pt')
+model = YOLO('best.pt')
 
 st.set_page_config(page_title="Object Detection")
 
