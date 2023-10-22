@@ -1,3 +1,4 @@
+from streamlit_webrtc import webrtc_streamer
 import cv2
 import streamlit as st
 from ultralytics import YOLO
