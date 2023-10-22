@@ -20,6 +20,8 @@ box_annotator = sv.BoxAnnotator(
 if st.button("Start Detection"):
  
         cap = cv2.VideoCapture(0)
+        video_display = st.image([], channels="BGR", use_container_width=True)
+
         while True:
           _, frame = cap.read()
           result = model(frame)[0]
