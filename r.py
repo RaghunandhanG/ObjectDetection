@@ -1,11 +1,10 @@
-from streamlit_webrtc import webrtc_streamer
-import cv2
 import streamlit as st
+import cv2
 from ultralytics import YOLO
 import supervision as sv
 
 
-model = YOLO('best.pt')
+model = YOLO('C:/Users/Mech/Documents/sih/best.pt')
 
 st.set_page_config(page_title="Object Detection")
 
@@ -17,13 +16,25 @@ box_annotator = sv.BoxAnnotator(
     text_thickness = 2,
     text_scale = 1)
 
-webrtc_streamer(key='key')
-    
+if st.button("Start Detection"):
+ 
+        cap = cv2.VideoCapture(0)
+        while True:
+          _, frame = cap.read()
+          result = model(frame)[0]
+          detections = sv.Detections.from_ultralytics(result)
+          print(detections)
+          
          # labels = [
            # f"{model.model.names[class_id]} {confidence:0.2f}"
             #for _, confidence, class_id, _
             # detections
        # 
-           
-          #cv2.waitKey(1)
+
+
+
+          frame = box_annotator.annotate(scene = frame,detections = detections)
+         
+          cv2.imshow('feed',frame)
+          cv2.waitKey(1)
              
